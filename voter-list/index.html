@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 class="heading">Voter List Form</h1>
+      
+        <form action="#" id="form">
+            <div class="form-items">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Enter name">  
+            </div>
+            <div class="form-items">
+                <span>Phone</span>
+                <input type="number" name="phone" placeholder="Enter your mobile number">
+            </div>
+            <div class="form-items">
+                <span>Age</span>
+                <input type="text" name="age" placeholder="Enter Your Age">
+            </div>
+            <div class="form-items">
+                <span>City</span>
+                <input type="text" name="city" placeholder="Enter Your City">
+            </div>
+            <div class="form-items">
+                <button class="submit"> Submit</button>
+            </div>
+        </form>
+        <table class="tlb-voterlist" border="1px">
+            <caption class="caption">
+                Voter List
+            </caption>
+            <thead>
+                <tr class="tr">
+                    <th class="th">Name</th>
+                    <th class="th">Phone</th>
+                    <th class="th">Age</th>
+                    <th class="th">City</th>
+                    <th class="th">Edit</th>
+                    <th class="th">Delete</th>
+                </tr>
+            </thead>
+            <tbody class="voterList"></tbody>
+        </table>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

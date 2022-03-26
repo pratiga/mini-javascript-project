@@ -1,0 +1,88 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(224, 211, 226);
+    color: rgb(146, 131, 45);
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: rgb(180, 160, 45);
+}
+.container {
+    display: grid;
+    place-items: center;
+    margin-top: 50px;
+    position: relative;
+}
+.form-items {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+span{
+    visibility: hidden;
+}
+input{
+    padding: 10px 80px;
+    align-items: baseline;
+    border: 4px double white;
+    background-color: beige;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom: none;
+}
+/* input:hover{
+    background-color: white;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border: 4px double rgb(238, 236, 153);
+} */
+label {
+    font-size: inherit;
+}
+.submit {
+    border-radius: 10%;
+    box-shadow: 2px rgb(170, 148, 148);
+     margin:2rem;
+    font-weight: 800; 
+    background-color: rgb(148, 148, 47);
+    border: none;
+    display: block;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px 0px;
+}
+button.submit{
+    width: 60%;
+    
+}
+.submit:hover {
+    background-color: black;
+    color: rgb(151, 134, 39);
+}
+/************* table ******** */
+table {
+    border: 2px solid rgb(90, 114, 34);
+    width: 100%;
+    
+}
+
+.success,
+.failure {
+    padding: 1rem;
+    color: white;
+    margin: 0.5rem auto;
+}
+.success{
+    background-color: rgb(74, 119, 74);
+}
+.failure {
+    background-color: rgb(151, 80, 80);
+}
+
