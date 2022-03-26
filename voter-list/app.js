@@ -20,18 +20,28 @@ addVoter(voter) {
     <td class="td"> ${phone} </td>
     <td class="td"> ${age} </td>
     <td class="td"> ${city} </td>
-    <td class="td"><a href="" class="editbtn">Edit</a></td>
-    <td class="td"><a href="" class="delbtn">Edit</a></td>
+    <td class="td"><a href="" class="editbtn">E</a></td>
+    <td class="td"><a href="" class="delbtn">&times;</a></td>
      `;
      list.appendChild(row);
 
 }
 // Deleting the Voter 
 deleteVoter(target) {
+    target.closest(".tr").remove();
 
 }
 // editing the Voter 
 editVoter(target){
+ const tr = target.closest(".tr");
+ const tdCollection = Array.from(tr.children);
+ const inputs = document.querySelectorAll("input");
+ let counter = 0;
+ inputs.forEach((input) => {
+     if (input.value !== "Submit"){
+         input.value = tdCollection[counter++].innerText;
+     }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+ });
 
 }
 }
@@ -87,5 +97,16 @@ form.addEventListener("submit", (e) => {
 // Delete or Edit Button Clicked 
 const voterList = document.querySelector(".voterList");
 voterList.addEventListener("click", (e) => {
+    e.preventDefault();
+    editDelVoter = new VoterManipulation();
+    if(e.target.classList.contains("delbtn")) {
+        editDelVoter.deleteVoter(e.target);
+        Utility.showAlert("Voter has been Removed","success");
+    }
+    if (e.target.classList.contains("editbtn")) {
+        editDelVoter.deleteVoter(e.target);
+        editDelVoter.editVoter(e.target);
+        Utility.showAlert("Voter About to be Edited", "success");
+    }
 
-}) 
+}); 
