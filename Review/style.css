@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    
+
+}
+.review{
+    height: 420px;
+    background-color: rgb(245, 236, 236);
+    border: 2px bold #fff;
+    border-radius: 10%;
+     width: 400px;
+     align-items: center;   
+}
+.img-container img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 5px;
+}
+#author{
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    text-transform: capitalize;
+}
+#job {
+    color:rgba(39, 220, 233, 0.808) ;
+}
+.prev-btn,
+.next-btn{
+    color: rgb(149, 229, 229);
+    border: none;
+   
+    
+}
+.random-btn{
+    padding: 10px;
+    color: rgb(67, 194, 194);
+    border: 2px solid rgb(57, 190, 207);
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+
+
+
+
